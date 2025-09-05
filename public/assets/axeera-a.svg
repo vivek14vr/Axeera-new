@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Axeera A monogram">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FFB400"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#233746"/>
+      <stop offset="100%" stop-color="#1B2F3C"/>
+    </linearGradient>
+    <clipPath id="outerA">
+      <path d="M16 2 L2 38 L30 38 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Swoosh inside A -->
+  <g clip-path="url(#outerA)">
+    <path d="M2 34 C 10 22, 20 18, 30 24" fill="none" stroke="url(#teal)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- Outer triangular stroke -->
+  <path d="M16 2 L2 38 L30 38 Z" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
