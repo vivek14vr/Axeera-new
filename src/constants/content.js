@@ -1,20 +1,19 @@
 // Website Content Constants
 // This file contains all text content used throughout the website
 // Following industry standards for internationalization and maintainability
-
 export const COMPANY_INFO = {
   NAME: "aXEERA",
   TAGLINE: "Tech Solutions Agency",
   DESCRIPTION:
     "Helping global startups and brands scale with strategic tech solutions.",
-  EMAIL: "info@axeera.com",
+  EMAIL: ["info@axeera.com","sales@axeera.com","help@axeera.com"],
   SUPPORT_EMAIL: "info@axeera.com",
   PHONE_PRIMARY: "+91 6299764087",
   PHONE_SECONDARY: "+91 8969718899",
   WHATSAPP: "+91 6299764087",
   ADDRESSES: {
     PORTLAND: "2709 N Hayden Island Dr, STE 113775, Portland, Oregon, 97217, USA",
-    NOIDA: "Noida, Uttar Pradesh, India",
+    NOIDA: "Sector 62,Noida, Uttar Pradesh, 201309, India",
   },
   WORKING_HOURS: {
     WEEKDAYS: "Mon - Fri: 9:00 AM - 6:00 PM",
@@ -192,6 +191,7 @@ export const WHY_CHOOSE_US = {
       ICON: "local",
       COLOR: "from-orange-500 to-red-500",
       DELAY: 0,
+      IMAGE: "/assets/support.jpg",
     },
     {
       TITLE: "Proven Track Record",
@@ -199,6 +199,7 @@ export const WHY_CHOOSE_US = {
       ICON: "track-record",
       COLOR: "from-blue-500 to-purple-500",
       DELAY: 0.2,
+      IMAGE: "/assets/track.jpg",
     },
     {
       TITLE: "Dedicated Project Manager",
@@ -207,6 +208,7 @@ export const WHY_CHOOSE_US = {
       ICON: "technology",
       COLOR: "from-green-500 to-teal-500",
       DELAY: 0.4,
+      IMAGE: "/assets/manager.jpg",
     },
     {
       TITLE: "Weekly Report",
@@ -215,6 +217,7 @@ export const WHY_CHOOSE_US = {
       ICON: "reporting",
       COLOR: "from-purple-500 to-pink-500",
       DELAY: 0.6,
+      IMAGE: "/assets/report.jpg",
     },
   ],
   CTA: {
@@ -353,7 +356,7 @@ export const CONTACT = {
   },
   MAP: {
     TITLE: "Find Us",
-    DESCRIPTION: "Visit our offices in San Diego, California",
+    DESCRIPTION: "Visit our offices in 2709 N Hayden Island Dr, STE 113775, Portland, Oregon, 97217, USA",
   },
   FAQ: {
     TITLE: "Frequently Asked Questions",

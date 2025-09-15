@@ -33,34 +33,27 @@ const Footer = () => {
               </Link>
               {/* <h4>BitoFix</h4> */}
             </div>
-            <p className="footer-description">
+            <p className="footer-description" style={{padding:"0px 50px 0px 20px"}}>
               Empowering global businesses with innovative technology solutions.
               We drive growth through strategic planning, creative execution,
               and data-driven results.
             </p>
-            {/* <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <div className="social-links">
+              <a href="https://www.facebook.com/profile.php?id=61580652428485" target="_blank" rel="noopener noreferrer"> <FaFacebookF /> </a>
+              <a href="https://www.instagram.com/aaxeera/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                <FaYoutube />
-              </a>
-            </div> */}
+             
+            </div>
           </div>
 
           {/* Quick Links Here*/}
-          <div className="footer-section">
+          <div className="footer-section" style={{ width: window.innerWidth < 768 ? "100%" : "15%"}}>
             <h4>Quick Links</h4>
-            <ul className="footer-links">
+            <ul 
+        className="footer-links" 
+        style={{ fontSize: "clamp(14px, 2vw, 14px)" }}>
+
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -79,9 +72,11 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="footer-section">
+          <div className="footer-section" style={{width: window.innerWidth < 768 ? "100%" : "15%"}}>
             <h4>Our Services</h4>
-            <ul className="footer-links">
+            <ul 
+        className="footer-links" 
+        style={{ fontSize: "clamp(14px, 2vw, 14px)" }}>
               <li>
                 <Link to="/services/seo">SEO Services</Link>
               </li>
@@ -104,32 +99,41 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="footer-section">
+          <div className="footer-section" style={{width: window.innerWidth < 768 ? "100%" : "40%"}}>
             <h4>Get in Touch</h4>
-            <div className="contact-info">
+            <div className="contact-info" style={{ fontSize: "clamp(14px, 2vw, 14px)" }}>
               <div className="contact-item">
                 <FaMapMarkerAlt />
                 <div>
-                  <p>2709 N Hayden Island Dr, STE 113775, Portland, Oregon, 97217, USA</p>
-                </div>
-                <div>
-                  <p>Noida, Uttar Pradesh, India</p>
+                  <a href="https://maps.app.goo.gl/2HDTLQggUp15ELZx6"
+                  style={{textDecoration:"none",color:"white"}}
+                  >
+                  2709 N Hayden Island Dr, STE 113775, Portland, Oregon, 97217, USA</a>
                 </div>
               </div>
-              {/* <div className="contact-item">
-                <FaPhone />
+              <div className="contact-item" style={{paddingBottom:"10px"}}>
+              <FaMapMarkerAlt />
                 <div>
-                  <p>+91 6299764087</p>
-                  <p>+91 8969718899</p>
+                  <a href="https://maps.app.goo.gl/a2TeNV1ad3poasE37"
+                  style={{textDecoration:"none", color:"white"}}>Noida, Uttar Pradesh, India</a>
                 </div>
-              </div> */}
+              </div>
               <div className="contact-item">
+                <FaPhone />
+                <div style={{paddingBottom:"10px"}}>
+                  {/* <p>+91 6299764087</p> */}
+                  <a href="tel:+918826526768" style={{ textDecoration: "none" , color:"white"}}> +91 8826526768</a>
+
+                </div>
+              </div>
+              <div className="contact-item" style={{paddingBottom:"10px", fontSize:"16px"}}>
                 <FaEnvelope />
                 <div>
                   <a href="mailto:info@axeera.com" className="email-link">
                     info@axeera.com
                   </a>
                   <br />
+                  
                   <a href="mailto:info@axeera.in" className="email-link">
                     info@axeera.in
                   </a>
@@ -138,7 +142,7 @@ const Footer = () => {
               <div className="contact-item">
                 <FaClock />
                 <div>
-                  <p>Mon - Fri: 9:00 AM - 7:00 PM</p>
+                  <p>Mon - Fri<br/>9:00 AM - 7:00 PM</p>
                   <p>Saturday & Sunday: Closed</p>
                 </div>
               </div>
@@ -149,7 +153,7 @@ const Footer = () => {
         {/* WhatsApp CTA */}
         <div className="whatsapp-cta">
           <a
-            href="https://wa.me/918969718899"
+            href="https://wa.me/918826526768"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"

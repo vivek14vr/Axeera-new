@@ -51,6 +51,11 @@ function Body() {
 
   // Scroll effect for sticky navbar - only after video section ends
   useEffect(() => {
+    // Disable sticky behavior entirely on mobile viewports
+    if (typeof window !== "undefined" && window.innerWidth <= 768) {
+      return;
+    }
+
     const handleScroll = () => {
       const videoContainer = videoContainerRef.current;
       const navbar = navbarRef.current;

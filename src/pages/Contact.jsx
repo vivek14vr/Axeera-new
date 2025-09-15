@@ -78,14 +78,14 @@ const CONTACT_INFO = [
   {
     icon: <FaEnvelope />,
     title: "Email Us",
-    details: [COMPANY_INFO.EMAIL],
+    details: [COMPANY_INFO.EMAIL[0],COMPANY_INFO.EMAIL[1],COMPANY_INFO.EMAIL[2]],
     color: "from-blue-500 to-purple-500",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Visit Us",
     details: [COMPANY_INFO.ADDRESSES.NOIDA, COMPANY_INFO.ADDRESSES.PORTLAND],
-    color: "from-orange-500 to-red-500",
+    color: "from-orange-5COMPANY_INFOto-red-500",
   },
   {
     icon: <FaClock />,
@@ -670,7 +670,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMzLjYiTiA3MsKwNTInNDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d174.4175822311201!2d-122.69207640626398!3d45.61704783566694!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1757915513050!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

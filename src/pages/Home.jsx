@@ -74,14 +74,18 @@ const Home = () => {
 
   const stats = [
     {
-      number: HERO_SECTION.STATS.PROJECTS,
-      label: HERO_SECTION.STATS.PROJECTS_LABEL,
+      number: "100+",
+      label: "Projects Delivered",
       icon: <FaTrophy />,
     },
-    { number: "150+", label: "Happy Clients", icon: <FaUsers /> },
     {
-      number: HERO_SECTION.STATS.CLIENTS,
-      label: HERO_SECTION.STATS.CLIENTS_LABEL,
+      number: "150+",
+      label: "Happy Clients",
+      icon: <FaUsers />,
+    },
+    {
+      number: "100%",
+      label: "Client Satisfaction",
       icon: <FaCheckCircle />,
     },
   ];
@@ -121,6 +125,7 @@ const Home = () => {
     {
       title: WHY_CHOOSE_US.ITEMS[0].TITLE,
       description: WHY_CHOOSE_US.ITEMS[0].DESCRIPTION,
+      image:WHY_CHOOSE_US.ITEMS[0].IMAGE,
       icon: <FaMapMarkedAlt />,
       color: WHY_CHOOSE_US.ITEMS[0].COLOR,
       delay: WHY_CHOOSE_US.ITEMS[0].DELAY,
@@ -128,6 +133,7 @@ const Home = () => {
     {
       title: WHY_CHOOSE_US.ITEMS[1].TITLE,
       description: WHY_CHOOSE_US.ITEMS[1].DESCRIPTION,
+      image:WHY_CHOOSE_US.ITEMS[1].IMAGE,
       icon: <FaTrophy />,
       color: WHY_CHOOSE_US.ITEMS[1].COLOR,
       delay: WHY_CHOOSE_US.ITEMS[1].DELAY,
@@ -135,6 +141,7 @@ const Home = () => {
     {
       title: WHY_CHOOSE_US.ITEMS[2].TITLE,
       description: WHY_CHOOSE_US.ITEMS[2].DESCRIPTION,
+      image:WHY_CHOOSE_US.ITEMS[2].IMAGE,
       icon: <FaCogs />,
       color: WHY_CHOOSE_US.ITEMS[2].COLOR,
       delay: WHY_CHOOSE_US.ITEMS[2].DELAY,
@@ -142,6 +149,7 @@ const Home = () => {
     {
       title: WHY_CHOOSE_US.ITEMS[3].TITLE,
       description: WHY_CHOOSE_US.ITEMS[3].DESCRIPTION,
+      image:WHY_CHOOSE_US.ITEMS[3].IMAGE,
       icon: <FaChartBar />,
       color: WHY_CHOOSE_US.ITEMS[3].COLOR,
       delay: WHY_CHOOSE_US.ITEMS[3].DELAY,
@@ -207,7 +215,7 @@ const Home = () => {
   };
 
   return (
-    <Layout heroMode={true}>
+    <Layout heroMode={false}>
       {/* Hero Section */}
       <Hero />
 
@@ -265,32 +273,17 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-sm stats-section">
+      <section className="stats-section">
         <div className="container">
-          <motion.div
-            className="stats-grid"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ margin: "-100px" }}
-          >
+          <div className="stats-grid">
             {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="stat-card"
-                variants={statsVariants}
-                whileHover={{
-                  y: -8,
-                  scale: 1.05,
-                  transition: { duration: 0.3 },
-                }}
-              >
+              <div key={index} className="stat-card">
                 <div className="stat-icon">{stat.icon}</div>
                 <div className="stat-number">{stat.number}</div>
                 <div className="stat-label">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -327,10 +320,15 @@ const Home = () => {
                 className="why-choose-card"
                 variants={itemVariants}
                 // Removed complex whileHover to reduce lag
+                
               >
                 <div className="card-background">
                   <div className="gradient-overlay"></div>
                   <div className="pattern-overlay"></div>
+                  <div
+                    className="pattern-background"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
                 </div>
                 <div className="card-content">
                   <div className="icon-container">

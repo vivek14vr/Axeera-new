@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
 import { HERO_SECTION, BUTTONS } from '../../constants/content';
 
 const Hero = () => {
@@ -25,9 +24,6 @@ const Hero = () => {
           loop
           className="cropped-video"
         />
-        <div className="navbar-overlay">
-          <Navbar />
-        </div>
         <div className="content-overlay">
           <div className="overlay-content container">
             <h1 className="hero-title">

@@ -102,7 +102,7 @@ const Navbar = () => {
       path: "/about",
       dropdown: [
         { name: "Our Story", path: "/about" },
-        // { name: 'Our Team', path: '/about#team' }
+        
       ],
     },
     {
