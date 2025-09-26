@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Layout from '../../components/common/Layout';
+import { useModal } from '../../components/common/ModalContext';
 import { 
   FaCode, FaMobile, FaDesktop, FaDatabase, FaShieldAlt, FaRocket, 
   FaCheckCircle, FaUsers, FaChartLine, FaCog, FaPalette, FaSearch,
@@ -130,6 +131,7 @@ const WebDevelopment = () => {
     "MySQL", "MongoDB", "AWS", "Docker", "Git", "REST APIs"
   ];
 
+  const { openContactModal } = useModal();
   return (
     <Layout>
       {/* Hero Section */}
@@ -153,9 +155,9 @@ const WebDevelopment = () => {
               From simple landing pages to complex web applications, we deliver solutions that exceed expectations.
             </p>
             <div className="hero-cta">
-              <Link to="/contact" className="btn btn-primary btn-lg">
+              <button className="btn btn-primary btn-lg" onClick={() => openContactModal('audit')}>
                 Get Free Audit
-              </Link>
+              </button>
               <Link to="/portfolio" className="btn btn-secondary btn-lg">
                 View Our Work
               </Link>

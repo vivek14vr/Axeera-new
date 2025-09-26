@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Layout from '../components/common/Layout';
+import { useModal } from '../components/common/ModalContext';
 import { 
   FaCode, FaMobile, FaSearch, FaPalette, FaChartLine, FaShieldAlt,
   FaCogs, FaUsers, FaBullseye, FaRocket, FaArrowRight, FaCheckCircle,
@@ -128,6 +129,7 @@ const Services = () => {
     }
   };
 
+  const { openContactModal } = useModal();
   return (
     <Layout>
       {/* Hero Section */}
@@ -280,9 +282,9 @@ const Services = () => {
               </p>
             </div>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary btn-lg">
+              <button className="btn btn-primary btn-lg" onClick={() => openContactModal('audit')}>
                 Get Free Audit
-              </Link>
+              </button>
               <Link to="/portfolio" className="btn btn-secondary btn-lg">
                 View Portfolio
               </Link>

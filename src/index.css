@@ -2475,6 +2475,67 @@ p {
   background: var(--light-gray);
 }
 
+/* Improve readability for OUR EXPERTISE (services) cards when using image backgrounds */
+.services-section .service-card {
+  position: relative;
+  color: #fff;
+  min-height: 400px; /* merged from duplicate later rule */
+}
+
+.services-section .service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.20) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.services-section .service-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.services-section .service-title,
+.services-section .service-description {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.services-section .service-link {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.services-section .service-icon {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .services-section .service-card::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+  }
+}
+
+/* Ensure featured (Web Development, Mobile App Development) also get darkening */
+.services-section .featured-service {
+  /* add an inset overlay without affecting existing hover effects */
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.35), var(--shadow-md);
+}
+
+.services-section .featured-service:hover {
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.35), var(--shadow-xl);
+}
+
 .service-card {
   background: var(--white);
   padding: var(--spacing-xl);
@@ -2488,6 +2549,8 @@ p {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 
 .service-card:hover {
   border-color: var(--primary-orange);
@@ -4354,7 +4417,7 @@ p {
   padding: var(--spacing-xl) ;
 }
 
-.stats-grid {
+.stats-grid1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
@@ -4409,9 +4472,11 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .stats-grid {
+  .stats-grid1 {
+    /* display: flex; */
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
+  
   }
   
   .stat-card {
@@ -4454,7 +4519,7 @@ p {
 
 
 /* Enhanced Service Card Animations */
-.service-card {
+/* .service-card {
   background: var(--white);
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
@@ -4467,24 +4532,20 @@ p {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-}
+} */
 
-.service-card::before {
+/* .service-card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    var(--primary-orange),
-    var(--warm-terracotta)
-  );
+  background: linear-gradient(to bottom, var(--light-gray), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
-}
+} */
 
 .service-card:hover::before {
   opacity: 0.05;
@@ -5483,6 +5544,16 @@ p {
 }
 
 /* Why Choose Us Section - Amazing Animated Design */
+.services-section .featured-service .service-title,
+.services-section .featured-service .service-description,
+.services-section .featured-service .service-link {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.services-section .featured-service:hover .service-title {
+  color: #fff;
+}
 .why-choose-section {
   background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
   position: relative;
@@ -6633,7 +6704,7 @@ p {
 /* Service Features Section */
 .service-features {
   padding: var(--spacing-3xl) 0;
-  background: var(--light-gray);
+  /* background: var(--light-gray); */
 }
 
 .features-grid {
@@ -7786,7 +7857,7 @@ p {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   justify-items: center;
   align-items: center;
@@ -9357,7 +9428,7 @@ p {
   align-items: center;
   gap: var(--spacing-xs);
   font-size: 0.85rem;
-  color: var(--medium-gray);
+  color: black;
   line-height: 1.4;
 }
 
@@ -9368,9 +9439,7 @@ p {
 }
 
 /* Enhanced Service Card for Services Page */
-.services-section .service-card {
-  min-height: 400px;
-}
+/* merged into the main services-section .service-card block above */
 
 .services-section .service-card .service-features {
   flex: 1;

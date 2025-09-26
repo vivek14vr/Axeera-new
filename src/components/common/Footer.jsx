@@ -43,6 +43,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/aaxeera/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
+              <a href="https://wa.me/918826526768" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp />
+              </a>              
              
             </div>
           </div>
@@ -115,7 +118,7 @@ const Footer = () => {
               <FaMapMarkerAlt />
                 <div>
                   <a href="https://maps.app.goo.gl/a2TeNV1ad3poasE37"
-                  style={{textDecoration:"none", color:"white"}}>Noida, Uttar Pradesh, India</a>
+                  style={{textDecoration:"none", color:"white"}}>Sector 62,Noida, Uttar Pradesh, India</a>
                 </div>
               </div>
               <div className="contact-item">
@@ -134,8 +137,8 @@ const Footer = () => {
                   </a>
                   <br />
                   
-                  <a href="mailto:info@axeera.in" className="email-link">
-                    info@axeera.in
+                  <a href="mailto:sales@axeera.com" className="email-link">
+                    sales@axeera.com
                   </a>
                 </div>
               </div>
@@ -151,7 +154,7 @@ const Footer = () => {
         </div>
 
         {/* WhatsApp CTA */}
-        <div className="whatsapp-cta">
+        {/* <div className="whatsapp-cta">
           <a
             href="https://wa.me/918826526768"
             target="_blank"
@@ -161,7 +164,7 @@ const Footer = () => {
             <FaWhatsapp />
             <span>Chat with us on WhatsApp</span>
           </a>
-        </div>
+        </div> */}
 
         {/* Footer Bottom */}
         <div className="footer-bottom">

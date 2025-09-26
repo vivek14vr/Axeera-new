@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { useModal } from './ModalContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -149,6 +150,8 @@ const Navbar = () => {
     return { top: 80, left: 0 };
   };
   
+  const { openContactModal } = useModal();
+
   return (
     <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
       <div className="main-navbar">
@@ -236,9 +239,15 @@ const Navbar = () => {
 
         {/* CTA Buttons */}
         <div className="navbar-cta desktop-nav">
-          <Link to="/contact" className="btn btn-primary btn-sm">
+          <button
+            className="btn btn-primary btn-sm"
+            onClick={(e) => {
+              e.preventDefault();
+              openContactModal('quote');
+            }}
+          >
             Get Quote
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -318,9 +327,16 @@ const Navbar = () => {
             </div>
           ))}
           <div className="mobile-cta">
-            <Link to="/contact" className="btn btn-primary btn-sm">
+            <button
+              className="btn btn-primary btn-sm"
+              onClick={(e) => {
+                e.preventDefault();
+                openContactModal('quote');
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Get Quote
-            </Link>
+            </button>
           </div>
         </motion.div>
       )}

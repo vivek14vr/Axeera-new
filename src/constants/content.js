@@ -74,6 +74,7 @@ export const SERVICES = {
       LINK: "/services/web_design",
       COLOR: "from-green-500 to-teal-500",
       FEATURED: true,
+      IMAGE:"./assets/web.jpg",
     },
     {
       ID: 2,
@@ -84,6 +85,7 @@ export const SERVICES = {
       LINK: "/services/mobile_app",
       COLOR: "from-cyan-500 to-blue-500",
       FEATURED: true,
+      IMAGE:"./assets/mob.jpg",
     },
     {
       ID: 3,
@@ -94,6 +96,7 @@ export const SERVICES = {
       LINK: "/services/seo",
       COLOR: "from-orange-500 to-red-500",
       FEATURED: false,
+      IMAGE:"./assets/seo.jpg",
     },
     // {
     //   ID: 4,
@@ -113,6 +116,7 @@ export const SERVICES = {
       LINK: "/services/software_development",
       COLOR: "from-pink-500 to-rose-500",
       FEATURED: false,
+      IMAGE:"./assets/soft.jpg",
     },
     {
       ID: 5,
@@ -123,6 +127,7 @@ export const SERVICES = {
       LINK: "/services/social_media",
       COLOR: "from-purple-500 to-indigo-500",
       FEATURED: false,
+      IMAGE:"./assets/social.jpg",
     },
     {
       ID: 6,
@@ -133,6 +138,7 @@ export const SERVICES = {
       LINK: "/services/cro",
       COLOR: "from-yellow-500 to-orange-500",
       FEATURED: false,
+      IMAGE:"./assets/conversion.jpg",
     },
     // {
     //   ID: 8,

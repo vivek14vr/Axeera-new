@@ -220,7 +220,7 @@ const Home = () => {
       <Hero />
 
       {/* What We Do Section */}
-      <section className="section what-we-do-section">
+      {/* <section className="section what-we-do-section">
         <div className="container">
           <motion.div
             className="section-header text-center mb-16"
@@ -255,10 +255,10 @@ const Home = () => {
                 <p className="what-we-do-description">{item.description}</p>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* View Many More Section */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -270,12 +270,12 @@ const Home = () => {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Stats Section */}
       <section className="stats-section">
         <div className="container">
-          <div className="stats-grid">
+          <div className="stats-grid1">
             {stats.map((stat, index) => (
               <div key={index} className="stat-card">
                 <div className="stat-icon">{stat.icon}</div>

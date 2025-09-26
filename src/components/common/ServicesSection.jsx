@@ -82,23 +82,29 @@ const ServicesSection = () => {
           viewport={{ margin: "-50px" }} // Reduced trigger area
         >
           {SERVICES.ITEMS.map((service, index) => (
-            <motion.div
-              key={service.ID}
-              className={`service-card ${service.FEATURED ? 'featured-service' : ''}`}
-              variants={itemVariants}
-              // Removed whileHover to reduce lag
-            >
-              <div className="service-icon">
-                {getIcon(service.ICON)}
-              </div>
-              <div className="service-number">0{service.ID}</div>
-              <h3 className="service-title">{service.TITLE}</h3>
-              <p className="service-description">{service.DESCRIPTION}</p>
-              <Link to={service.LINK} className="service-link">
-                {BUTTONS.LEARN_MORE}
-              </Link>
-            </motion.div>
-          ))}
+  <motion.div
+    key={service.ID}
+    className={`service-card ${service.FEATURED ? 'featured-service' : ''}`}
+    variants={itemVariants}
+    style={{
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${service.IMAGE})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    
+  >
+    <div className="service-icon">
+      {getIcon(service.ICON)}
+    </div>
+    <div className="service-number">0{service.ID}</div>
+    <h3 className="service-title">{service.TITLE}</h3>
+    <p className="service-description">{service.DESCRIPTION}</p>
+    <Link to={service.LINK} className="service-link">
+      {BUTTONS.LEARN_MORE}
+    </Link>
+  </motion.div>
+))}
+
         </motion.div>
         
         <motion.div 

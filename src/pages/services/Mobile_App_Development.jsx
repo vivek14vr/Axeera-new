@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Layout from '../../components/common/Layout';
+import { useModal } from '../../components/common/ModalContext';
 import { 
   FaMobile, FaCode, FaAndroid, FaApple, FaDatabase, FaShieldAlt, FaRocket, 
   FaCheckCircle, FaUsers, FaChartLine, FaCog, FaPalette, FaSearch,
@@ -149,6 +150,7 @@ const MobileAppDevelopment = () => {
     }
   ];
 
+  const { openContactModal } = useModal();
   return (
     <Layout>
       {/* Hero Section */}
@@ -172,9 +174,9 @@ const MobileAppDevelopment = () => {
               From concept to launch, we deliver apps that users love and businesses rely on.
             </p>
             <div className="hero-cta">
-              <Link to="/contact" className="btn btn-primary btn-lg">
+              <button className="btn btn-primary btn-lg" onClick={() => openContactModal('audit')}>
                 Get Free Audit
-              </Link>
+              </button>
               <Link to="/portfolio" className="btn btn-secondary btn-lg">
                 View Our Work
               </Link>

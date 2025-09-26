@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HERO_SECTION, BUTTONS } from '../../constants/content';
+import { useModal } from './ModalContext';
 
 const Hero = () => {
   const [currentWord, setCurrentWord] = useState(0);
@@ -14,6 +15,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [words.length]);
 
+  const { openContactModal } = useModal();
   return (
     <section className="hero-section">
       <div className="video-container">
@@ -37,9 +39,9 @@ const Hero = () => {
               {HERO_SECTION.SUBTITLE}
             </p>
             <div className="hero-cta">
-              <Link to="/contact" className="btn btn-primary">
+              <button className="btn btn-primary" onClick={() => openContactModal('audit')}>
                 {HERO_SECTION.CTA_PRIMARY}
-              </Link>
+              </button>
               <Link to="/contact" className="btn btn-secondary">
                 {HERO_SECTION.CTA_SECONDARY}
               </Link>
